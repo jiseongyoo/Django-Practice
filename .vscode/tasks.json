@@ -1,0 +1,21 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "kill-django",
+      "type": "process",
+      "command": "powershell",
+      "args": [
+        "-NoProfile",
+        "-Command",
+        "$p = Get-CimInstance Win32_Process -Filter 'Name = \"python.exe\"' | Where-Object { $_.CommandLine -like '*manage.py*runserver*' }; if ($p) { Stop-Process -Id $p.ProcessId -Force -ErrorAction SilentlyContinue }"
+      ],
+      "presentation": {
+        "reveal": "silent",
+        "close": true,
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    }
+  ]
+}
