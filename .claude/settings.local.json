@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(& \"C:\\\\Users\\\\jsing\\\\miniconda3\\\\envs\\\\django-practice\\\\python.exe\" manage.py runserver 127.0.0.1:8000)",
+      "PowerShell(Start-Sleep -Seconds 3; $r = Invoke-WebRequest -Uri http://127.0.0.1:8000/ -UseBasicParsing; Write-Output \"STATUS: $\\($r.StatusCode\\)\"; Start-Process \"http://127.0.0.1:8000/\")",
+      "Bash(git config *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git push *)"
+    ]
+  }
+}
