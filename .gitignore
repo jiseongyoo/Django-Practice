@@ -1,0 +1,17 @@
+# Python bytecode cache (regenerated every time Python imports a module)
+__pycache__/
+*.py[cod]
+*$py.class
+
+# SQLite database (created/updated by `manage.py migrate` and request handling)
+db.sqlite3
+db.sqlite3-journal
+
+# `collectstatic` output (regenerated on deploy)
+/staticfiles/
+
+# User uploads at runtime
+/media/
+
+# Django / app logs
+*.log
